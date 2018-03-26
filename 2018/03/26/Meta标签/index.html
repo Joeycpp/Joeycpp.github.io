@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Joey's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="小伙伴，在我们日常写网页的时候有没有注意过Meta 标签，你对它了解多少呢？Meta标签是HTML语言head区的一个辅助性标签，它位于HTML文档头部的head标记和title标记之间，它提供用户不可见的信息。它可用于浏览器（如何显示内容或重新加载页面），搜索引擎（关键词），或其他web服务。  今天给大家分享一下关于Meta 标签的常见功能分别由移动端和PC 端 的：  1、申请文档使用的字">
+<meta property="og:type" content="article">
+<meta property="og:title" content="你对 Meta 标签了解多少？">
+<meta property="og:url" content="http://yoursite.com/2018/03/26/Meta标签/index.html">
+<meta property="og:site_name" content="Joey&#39;s Blog">
+<meta property="og:description" content="小伙伴，在我们日常写网页的时候有没有注意过Meta 标签，你对它了解多少呢？Meta标签是HTML语言head区的一个辅助性标签，它位于HTML文档头部的head标记和title标记之间，它提供用户不可见的信息。它可用于浏览器（如何显示内容或重新加载页面），搜索引擎（关键词），或其他web服务。  今天给大家分享一下关于Meta 标签的常见功能分别由移动端和PC 端 的：  1、申请文档使用的字">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4889822-41eca1e3966681d4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-11-17T08:45:06.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="你对 Meta 标签了解多少？">
+<meta name="twitter:description" content="小伙伴，在我们日常写网页的时候有没有注意过Meta 标签，你对它了解多少呢？Meta标签是HTML语言head区的一个辅助性标签，它位于HTML文档头部的head标记和title标记之间，它提供用户不可见的信息。它可用于浏览器（如何显示内容或重新加载页面），搜索引擎（关键词），或其他web服务。  今天给大家分享一下关于Meta 标签的常见功能分别由移动端和PC 端 的：  1、申请文档使用的字">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4889822-41eca1e3966681d4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/03/26/Meta标签/"/>
+
+
+
+
+
+  <title>你对 Meta 标签了解多少？ | Joey's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Joey's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/Meta标签/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Joey">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joey's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">你对 Meta 标签了解多少？</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-26T10:54:44+08:00">
+                2018-03-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>小伙伴，在我们日常写网页的时候有没有注意过<strong>Meta</strong> 标签，你对它了解多少呢？<strong>Meta</strong>标签是HTML语言head区的一个辅助性标签，它位于HTML文档头部的head标记和title标记之间，它提供用户不可见的信息。它可用于浏览器（如何显示内容或重新加载页面），搜索引擎（关键词），或其他web服务。</p>
+</blockquote>
+<p>今天给大家分享一下关于Meta 标签的常见功能分别由<strong>移动端</strong>和<strong>PC 端</strong> 的：</p>
+<p><a href="http://www.aliyue.net/wp-content/uploads/2016/06/meta.jpg" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/4889822-41eca1e3966681d4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="meta"></a></p>
+<h3 id="1、申请文档使用的字符编码"><a href="#1、申请文档使用的字符编码" class="headerlink" title="1、申请文档使用的字符编码"></a>1、申请文档使用的字符编码</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta <span class="attribute">charset</span>=<span class="string">'utf-8'</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>或<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta <span class="attribute">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attribute">content</span>=<span class="string">"text/html; charset=utf-8"</span> /&gt;</span><br></pre></td></tr></table></figure></p>
+<p>该 meta 标签定义了 HTML 页面所使用的字符集为 utf-8 ，就是万国码。它可以在同一页面显示中文简体、繁体及其它语言（如日文，韩文）等。当然，你也可以使用gb2312（简体中文），big5（繁体中文）等等其他字符集。</p>
+<p><strong>而目前我们一般推荐使用第一种写法，也是HTML5使用的写法。</strong></p>
+<h3 id="2、声明使用的浏览器及版本"><a href="#2、声明使用的浏览器及版本" class="headerlink" title="2、声明使用的浏览器及版本"></a>2、声明使用的浏览器及版本</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta <span class="attribute">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attribute">content</span>=<span class="string">"IE=edge,chrome=1"</span> /&gt;</span><br></pre></td></tr></table></figure>
+<p>当指定的content值为IE=edge,chrome=1时，优先使用 IE 最新版本和 Chrome。假定客户端安装了Google Chrome Frame，则在IE中使用chrome的渲染引擎来渲染页面，否则，将会使用客户端IE最高的标准模式对页面进行渲染。</p>
+<p>还有以下几种设置方式：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=6"</span> /&gt;</span><span class="comment">&lt;!-- 使用IE6 --&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=EmulateIE7"</span> /&gt;</span><span class="comment">&lt;!-- 使用IE7 --&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=8"</span> /&gt;</span><span class="comment">&lt;!-- 使用IE8 --&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge"</span> /&gt;</span> <span class="comment">&lt;!--指示IE以目前可用的最高模式显示内容--&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="3、SEO优化相关"><a href="#3、SEO优化相关" class="headerlink" title="3、SEO优化相关"></a>3、SEO优化相关</h3><p>页面描述，每个网页都应有一个不超过 150 个字符且能准确反映网页内容的描述标签。<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta <span class="attribute">name</span>=<span class="string">"description"</span> <span class="attribute">content</span>=<span class="string">"不超过150个字符"</span> /&gt;</span><br></pre></td></tr></table></figure></p>
+<p>页面关键词，每个网页应具有描述该网页内容的一组唯一的关键字。</p>
+<p>使用人们可能会搜索，并准确描述网页上所提供信息的描述性和代表性关键字及短语。<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta <span class="attribute">name</span>=<span class="string">"keywords"</span> <span class="attribute">content</span>=<span class="string">"html5, css3, 关键字"</span>/&gt;</span><br></pre></td></tr></table></figure></p>
+<p>定义网页作者，非必要<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta <span class="attribute">name</span>=<span class="string">"author"</span> <span class="attribute">content</span>=<span class="string">"月光光"</span> /&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="4、页面重定向和刷新：content内的数字代表时间（秒），既多少时间后刷新。如果加url-则会重定向到指定网页。"><a href="#4、页面重定向和刷新：content内的数字代表时间（秒），既多少时间后刷新。如果加url-则会重定向到指定网页。" class="headerlink" title="4、页面重定向和刷新：content内的数字代表时间（秒），既多少时间后刷新。如果加url,则会重定向到指定网页。"></a>4、页面重定向和刷新：content内的数字代表时间（秒），既多少时间后刷新。如果加url,则会重定向到指定网页。</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta <span class="attribute">http-equiv</span>=<span class="string">"Refresh"</span>  <span class="attribute">contect</span>=<span class="string">"5;url=http://www.helloweba.com"</span> /&gt;</span><br></pre></td></tr></table></figure>
+<p>上述代码表示停留5秒钟后自动刷新跳转到URL网址<a href="http://www.helloweba.com。" target="_blank" rel="noopener">http://www.helloweba.com。</a></p>
+<h3 id="5、Expires网页过期时间"><a href="#5、Expires网页过期时间" class="headerlink" title="5、Expires网页过期时间"></a>5、Expires网页过期时间</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta <span class="attribute">http-equiv</span>=<span class="string">"Expires"</span> <span class="attribute">contect</span>=<span class="string">"Mon,12 May 2016 00:20:00 GMT"</span> /&gt;</span><br></pre></td></tr></table></figure>
+<p>设定网页的到期时间，一旦过期则必须到服务器上重新调用，需要注意的是必须使用GMT时间格式，或直接设为0(不缓存)。</p>
+<h3 id="6、Pragma禁止本地缓存"><a href="#6、Pragma禁止本地缓存" class="headerlink" title="6、Pragma禁止本地缓存"></a>6、Pragma禁止本地缓存</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta <span class="attribute">http-equiv</span>=<span class="string">"Pragma"</span> <span class="attribute">contect</span>=<span class="string">"no-cache"</span> /&gt;</span><br></pre></td></tr></table></figure>
+<p>设定网页不保存在缓存中，每次访问都刷新页面。这样设定，访问者将无法脱机浏览。</p>
+<h3 id="7、viewport移动设备屏幕可视区域"><a href="#7、viewport移动设备屏幕可视区域" class="headerlink" title="7、viewport移动设备屏幕可视区域"></a>7、viewport移动设备屏幕可视区域</h3><p>由于移动设备屏幕宽度不同于传统 web，因此我们需要改变 viewport 值。</p>
+<ul>
+<li><p>大部分4.7-5寸设备的viewport宽设为360px；5.5寸设备设为400px；iphone6设为375px；ipone6 plus设为414px。</p>
+</li>
+<li><p>width – viewport 的宽度 （范围从 200 到 10,000，默认为 980 像素）</p>
+</li>
+<li>height – viewport 的高度 （范围从 223 到 10,000 ）</li>
+<li>initial-scale – 初始的缩放比例 （范围从 &gt; 0 到 10）</li>
+<li>minimum-scale – 允许用户缩放到的最小比例</li>
+<li>maximum-scale – 允许用户缩放到的最大比例</li>
+<li>user-scalable – 用户是否可以手动缩放 (no，yes)<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta <span class="attr">name="viewport"</span> <span class="attr">content="width=device-width,</span> <span class="attr">initial-scale=1.0,</span> <span class="attr">maximum-scale=1.0,</span> <span class="attr">user-scalable=no"</span> /&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>强制让文档与设备的宽度保持 1:1 ；</p>
+<p>文档最大的宽度比列是1.0（ initial-scale 初始刻度值和 maximum-scale 最大刻度值）；</p>
+<p>user-scalable 定义用户是否可以手动缩放（ no 为不缩放），使页面固定设备上面的大小；</p>
+<p>注意：实际测试中发现，有些安卓系统自带的浏览器并不支持这一条规则，能够对页面进行放大，一旦放大响应的 box 也随之放大，导致页面出现错乱问题，解决方法：定义页面的最小宽度。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123; </span><br><span class="line">    <span class="attribute">min-width</span>: <span class="number">320px</span>; </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+<p>注意，很多人使用initial-scale=1到非响应式网站上，这会让网站以100%宽度渲染，用户需要手动移动页面或者缩放。如果和initial-scale=1同时使用user-scalable=no或maximum-scale=1，则用户将不能放大/缩小网页来看到全部的内容。</p>
+<p>对于移动设备上的meta还有以下一些设置。</p>
+<h3 id="8、WebApp全屏模式：伪装app，离线应用。"><a href="#8、WebApp全屏模式：伪装app，离线应用。" class="headerlink" title="8、WebApp全屏模式：伪装app，离线应用。"></a>8、WebApp全屏模式：伪装app，离线应用。</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta <span class="attribute">name</span>=<span class="string">"apple-mobile-web-app-capable"</span> <span class="attribute">content</span>=<span class="string">"yes"</span> /&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="9、隐藏状态栏-设置状态栏颜色：只有在开启WebApp全屏模式时才生效。"><a href="#9、隐藏状态栏-设置状态栏颜色：只有在开启WebApp全屏模式时才生效。" class="headerlink" title="9、隐藏状态栏/设置状态栏颜色：只有在开启WebApp全屏模式时才生效。"></a>9、隐藏状态栏/设置状态栏颜色：只有在开启WebApp全屏模式时才生效。</h3><figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=<span class="string">"apple-mobile-web-app-status-bar-style"</span> content=<span class="string">"black-translucent"</span> /&gt; </span><br><span class="line">content的值为default | <span class="type">black</span> | <span class="type">black</span>-translucent</span><br></pre></td></tr></table></figure>
+<h3 id="10、添加到主屏后的标题"><a href="#10、添加到主屏后的标题" class="headerlink" title="10、添加到主屏后的标题"></a>10、添加到主屏后的标题</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta <span class="attribute">name</span>=<span class="string">"apple-mobile-web-app-title"</span> <span class="attribute">content</span>=<span class="string">"标题"</span> /&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="11、忽略数字自动识别为电话号码"><a href="#11、忽略数字自动识别为电话号码" class="headerlink" title="11、忽略数字自动识别为电话号码"></a>11、忽略数字自动识别为电话号码</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta <span class="attribute">content</span>=<span class="string">"telephone=no"</span> <span class="attribute">name</span>=<span class="string">"format-detection"</span> /&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="12、忽略识别邮箱"><a href="#12、忽略识别邮箱" class="headerlink" title="12、忽略识别邮箱"></a>12、忽略识别邮箱</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta <span class="attribute">content</span>=<span class="string">"email=no"</span> <span class="attribute">name</span>=<span class="string">"format-detection"</span> /&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>今天就分享到这里，祝小伙伴们学习愉快！也谢谢大家的关注。</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/26/js知识点/" rel="next" title="JavaScript中必须要掌握的知识">
+                <i class="fa fa-chevron-left"></i> JavaScript中必须要掌握的知识
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/26/sublime-text3的使用（插件和快捷键）/" rel="prev" title="Sublime-Text3的使用（插件和快捷键）">
+                Sublime-Text3的使用（插件和快捷键） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Joey" />
+          <p class="site-author-name" itemprop="name">Joey</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">Artikel</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、申请文档使用的字符编码"><span class="nav-number">1.</span> <span class="nav-text">1、申请文档使用的字符编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、声明使用的浏览器及版本"><span class="nav-number">2.</span> <span class="nav-text">2、声明使用的浏览器及版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、SEO优化相关"><span class="nav-number">3.</span> <span class="nav-text">3、SEO优化相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、页面重定向和刷新：content内的数字代表时间（秒），既多少时间后刷新。如果加url-则会重定向到指定网页。"><span class="nav-number">4.</span> <span class="nav-text">4、页面重定向和刷新：content内的数字代表时间（秒），既多少时间后刷新。如果加url,则会重定向到指定网页。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、Expires网页过期时间"><span class="nav-number">5.</span> <span class="nav-text">5、Expires网页过期时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、Pragma禁止本地缓存"><span class="nav-number">6.</span> <span class="nav-text">6、Pragma禁止本地缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、viewport移动设备屏幕可视区域"><span class="nav-number">7.</span> <span class="nav-text">7、viewport移动设备屏幕可视区域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、WebApp全屏模式：伪装app，离线应用。"><span class="nav-number">8.</span> <span class="nav-text">8、WebApp全屏模式：伪装app，离线应用。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9、隐藏状态栏-设置状态栏颜色：只有在开启WebApp全屏模式时才生效。"><span class="nav-number">9.</span> <span class="nav-text">9、隐藏状态栏/设置状态栏颜色：只有在开启WebApp全屏模式时才生效。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10、添加到主屏后的标题"><span class="nav-number">10.</span> <span class="nav-text">10、添加到主屏后的标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11、忽略数字自动识别为电话号码"><span class="nav-number">11.</span> <span class="nav-text">11、忽略数字自动识别为电话号码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12、忽略识别邮箱"><span class="nav-number">12.</span> <span class="nav-text">12、忽略识别邮箱</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Joey</span>
+</div>
+
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

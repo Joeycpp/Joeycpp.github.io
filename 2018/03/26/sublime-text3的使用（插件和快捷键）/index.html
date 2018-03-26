@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Joey's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="一、安装及安装emmet插件首先,去sublime官网下载软件：[http://www.sublimetext.com/ ]， 软件很小，我用的是最新版的text3，大家可以用目前稳定版text2。打开它的官网，我们就可以看到几个动画，演示sublime的强大功能。 其次，软件安装好了之后，我们来安装一个插件，推荐使用package control组件来安装插件，很方便。 安装方法如下： 按快捷键">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sublime-Text3的使用（插件和快捷键）">
+<meta property="og:url" content="http://yoursite.com/2018/03/26/sublime-text3的使用（插件和快捷键）/index.html">
+<meta property="og:site_name" content="Joey&#39;s Blog">
+<meta property="og:description" content="一、安装及安装emmet插件首先,去sublime官网下载软件：[http://www.sublimetext.com/ ]， 软件很小，我用的是最新版的text3，大家可以用目前稳定版text2。打开它的官网，我们就可以看到几个动画，演示sublime的强大功能。 其次，软件安装好了之后，我们来安装一个插件，推荐使用package control组件来安装插件，很方便。 安装方法如下： 按快捷键">
+<meta property="og:updated_time" content="2017-09-15T05:31:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sublime-Text3的使用（插件和快捷键）">
+<meta name="twitter:description" content="一、安装及安装emmet插件首先,去sublime官网下载软件：[http://www.sublimetext.com/ ]， 软件很小，我用的是最新版的text3，大家可以用目前稳定版text2。打开它的官网，我们就可以看到几个动画，演示sublime的强大功能。 其次，软件安装好了之后，我们来安装一个插件，推荐使用package control组件来安装插件，很方便。 安装方法如下： 按快捷键">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/03/26/sublime-text3的使用（插件和快捷键）/"/>
+
+
+
+
+
+  <title>Sublime-Text3的使用（插件和快捷键） | Joey's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Joey's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/sublime-text3的使用（插件和快捷键）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Joey">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joey's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Sublime-Text3的使用（插件和快捷键）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-26T10:54:44+08:00">
+                2018-03-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="一、安装及安装emmet插件"><a href="#一、安装及安装emmet插件" class="headerlink" title="一、安装及安装emmet插件"></a>一、安装及安装emmet插件</h2><p>首先,去sublime官网下载软件：[<a href="http://www.sublimetext.com/" target="_blank" rel="noopener">http://www.sublimetext.com/</a> ]，</p>
+<p>软件很小，我用的是最新版的text3，大家可以用目前稳定版text2。打开它的官网，我们就可以看到几个动画，演示sublime的强大功能。</p>
+<p>其次，软件安装好了之后，我们来安装一个插件，推荐使用package control组件来安装插件，很方便。</p>
+<p>安装方法如下：</p>
+<p>按快捷键ctrl+~ 调出命名控制行：然后如果是text2输入如下命令：<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import urllib2,<span class="built_in">os</span>,hashlib; h = <span class="string">'7183a2d3e96f11eeadd761d777e62404'</span> + <span class="string">'e330c659d4bb41d3bdf022e94cab3cd0'</span>; pf = <span class="string">'Package Control.sublime-package'</span>; ipp = sublime.installed_packages_path(); <span class="built_in">os</span>.makedirs( ipp ) <span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">os</span>.<span class="built_in">path</span>.exists(ipp) <span class="keyword">else</span> None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( <span class="string">'http://sublime.wbond.net/'</span> + pf.replace(<span class="string">' '</span>, <span class="string">'%20'</span>)).<span class="built_in">read</span>(); dh = hashlib.sha256(by).hexdigest(); <span class="built_in">open</span>( <span class="built_in">os</span>.<span class="built_in">path</span>.join( ipp, pf), <span class="string">'wb'</span> ).<span class="built_in">write</span>(by) <span class="keyword">if</span> dh == h <span class="keyword">else</span> None; <span class="built_in">print</span>(<span class="string">'Error validating download (got %s instead of %s), please try manual install'</span> % (dh, h) <span class="keyword">if</span> dh != h <span class="keyword">else</span> <span class="string">'Please restart Sublime Text to finish installation'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>如果是text3输入如下命令：<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import urllib.request,os,hashlib; h = <span class="string">'7183a2d3e96f11eeadd761d777e62404'</span> + <span class="string">'e330c659d4bb41d3bdf022e94cab3cd0'</span>; pf = <span class="string">'Package Control.sublime-package'</span>; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); <span class="keyword">by</span> = urllib.request.urlopen( <span class="string">'http://sublime.wbond.net/'</span> + pf.<span class="built_in">replace</span>(<span class="string">' '</span>, <span class="string">'%20'</span>)).<span class="built_in">read</span>(); dh = hashlib.sha256(<span class="keyword">by</span>).hexdigest(); print(<span class="string">'Error validating download (got %s instead of %s), please try manual install'</span> % (dh, h)) <span class="keyword">if</span> dh != h <span class="keyword">else</span> <span class="built_in">open</span>(os.path.join( ipp, pf), <span class="string">'wb'</span> ).<span class="built_in">write</span>(<span class="keyword">by</span>)</span><br></pre></td></tr></table></figure></p>
+<p>具体安装您也可以查看：[ <a href="https://sublime.wbond.net/installation#st3" target="_blank" rel="noopener">https://sublime.wbond.net/installation#st3</a> ]</p>
+<p>最后，有了package control，你就可以安装您想要的插件了!很简单，sublime下面有很多插件，一般编辑器有的，sublime都会以插件的形式出现，下面我们最先介绍Emmet。</p>
+<p>打开package control 输入install package 然后找到emmet，点击安装，重启sublime就可以了，具体请看：<a href="https://github.com/sergeche/emmet-sublime#readme" target="_blank" rel="noopener">https://github.com/sergeche/emmet-sublime#readme</a></p>
+<h2 id="二-sublime常用插件："><a href="#二-sublime常用插件：" class="headerlink" title="二. sublime常用插件："></a>二. sublime常用插件：</h2><p><strong>1 . Emmet（原名 Zen Coding）</strong></p>
+<p>一种快速编写html/css的方法</p>
+<p>不得不用的一款前端开发方面的插件，Write less , show more.安装后可直接使用，Tab键触发，Alt+Shift+W是个代码机器。</p>
+<p><strong>2. Alignment</strong></p>
+<p>代码对齐，如写几个变量，选中这几行，Ctrl+Alt+A，哇，齐了。</p>
+<p><strong>3. AutoPrefixr</strong></p>
+<p>写 CSS可自动添加 -webkit 等私有词缀，Ctrl+Alt+X触发。</p>
+<p> <strong>4 . html5</strong></p>
+<p>支持hmtl5规范的插件包<br>使用方法：新建html文档&gt;输入html5&gt;敲击Tab键&gt;自动补全html5规范文档</p>
+<p><strong>5. SideBarEnhancements</strong></p>
+<p>侧栏右键功能增强，非常实用</p>
+<p><strong>6.GBK to UTF8</strong></p>
+<p>将文件编码从GBK转黄成UTF8，菜单 – File里面找</p>
+<p><strong>7.jQuery</strong></p>
+<p>支持JQuery规范的插件包</p>
+<p><strong>8.WordPress</strong></p>
+<p>集成一些WordPress的函数，对于像我这种经常要写WP模版和插件的人特别有用</p>
+<p><strong>9.PHPTidy</strong></p>
+<p>整理排版PHP代码</p>
+<p><strong>10.YUI Compressor</strong></p>
+<p>压缩JS和CSS文件</p>
+<p><strong>11.Ctags插件</strong><br>有童鞋抱怨Sublime Text不能支持函数的跳转（比如像Eclipse那样，按住Control点击该方法或者对象，即可跳转到定义的地方； Alt+←即可回到原处）。其实Sublime Text也可以借助插件实现之（当然，有些情况下:Can not find defination）毕竟这个也是借助正则来匹配完成的。因此这个也就要求代码很规范。这个插件相对来讲会有些麻烦，具体的可以参见:Sublime Text ctags 的配置.</p>
+<p><strong>12.Doc​Blockr</strong></p>
+<p>注释插件，生成幽美的注释。标准的注释，包括函数名、参数、返回值等，并以多行显示，省去手动编写。</p>
+<p><strong>13 . SublimeLinter</strong></p>
+<p>一个支持lint语法的插件，可以高亮linter认为有错误的代码行，也支持高亮一些特别的注释，比如“TODO”，这样就可以被快速定位。（IntelliJ IDEA的TODO功能很赞，这个插件虽然比不上，但是也够用了吧）</p>
+<p><strong>14.BracketHighlighter</strong></p>
+<p>类似于代码匹配，可以匹配括号，引号等符号内的范围。</p>
+<p><strong>15.ColorPicker</strong><br>通常，如果你想使用一个颜色选择器则可能打开 Photoshop 或 GIMP。而在 Sublime Text 中，你可以使用内置的颜色选择器。安装完成后，只要按下Ctrl / Cmd + Shift + C 快捷键。</p>
+<p><strong>16.SublimeREPL</strong><br>这可能是对程序员很有用的插件。SublimeREPL 允许你在 Sublime Text 中运行各种语言（NodeJS ， Python，Ruby， Scala 和 Haskell 等等）。</p>
+<p><strong>17.Sublime Terminal</strong><br>这个插件可以让你在Sublime中直接使用终端打开你的项目文件夹，并支持使用快捷键。</p>
+<p><strong>18.MarkDown Editing</strong><br>SublimeText不仅仅是能够查看和编辑 Markdown 文件，但它会视它们为格式很糟糕的纯文本。这个插件通过适当的颜色高亮和其它功能来更好地完成这些任务。关于如何在SublimeText下高效些东西可参见文章：sublime text 2(3)下的Markdown写作 抑或是前段时间写下的追寻高效工作的一路折腾㈡</p>
+<p><strong>19.SideBarFolders</strong><br>打开的文件夹都太多了? 来用这个来管理文件夹，世界原来也可以这么美好。</p>
+<p><strong>20.SublimeLinter插件</strong><br>SublimeLinter 是前端编码利器——Sublime Text 的一款插件，用于高亮提示用户编写的代码中存在的不规范和错误的写法，支持 JavaScript、CSS、HTML、Java、PHP、Python、Ruby 等十多种开发语言。这篇文章介绍如何在 Windows 中配置 SublimeLinter 进行 JS &amp; CSS 校验。<br>比如写例如像lua这样的弱语言脚本代码，有这个可以规避掉很多不该有的低级错误吧？当然这也需要你SublimeLinter安装完毕之后再安装一个SublimeLinter-lua即可。具体的使用可以参见：借助 SublimeLinter 编写高质量的 JavaScript &amp; CSS 代码</p>
+<p><strong>21.SideBarEnhancements插件</strong><br>SideBarEnhancements是一款很实用的右键菜单增强插件；在安装该插件前，在Sublime Text左侧FOLDERS栏中点击右键，只有寥寥几个简单的功能；安装了就相当于给其丰了大胸一般。 更强大的是，该插件还能让我们自定义快捷键呼出某个浏览器以预览页面！这样就不用到项目目录下寻找和拖动到特定浏览器中预览了。<br>安装此插件后，点击菜单栏的preferences-&gt;package setting-&gt;side bar-&gt;Key Building-User，键入以下代码：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[   </span><br><span class="line">    &#123; <span class="attr">"keys"</span>: [<span class="string">"ctrl+shift+c"</span>], <span class="attr">"command"</span>: <span class="string">"copy_path"</span> &#125;,</span><br><span class="line">    //chrome</span><br><span class="line">    &#123; <span class="attr">"keys"</span>: [<span class="string">"f2"</span>], <span class="attr">"command"</span>: <span class="string">"side_bar_files_open_with"</span>,</span><br><span class="line">            <span class="attr">"args"</span>: &#123;</span><br><span class="line">                <span class="attr">"paths"</span>: [],</span><br><span class="line">                <span class="attr">"application"</span>: <span class="string">"C:\\Users\\jeffj\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe"</span>,</span><br><span class="line">                <span class="attr">"extensions"</span>:<span class="string">".*"</span></span><br><span class="line">            &#125;</span><br><span class="line">     &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
+<p><strong>22. HTML-CSS-JS Prettify</strong><br>一款集成了格式化（美化）html、css、js三种文件类型的插件，即便html,js写在PHP文件之内。插件依赖于nodejs，因此需要事先安装nodejs，然后才可以正常运行。插件安装完成后，快捷键ctrl+shift+H完成当前文件的美化操作。插件对html、css文件的美化不是非常满意，但还可以，后面将说明如何修改css美化脚本。本人用起来超级爽的，鉴于篇幅，就不赘述，可以参见这篇介绍。</p>
+<p><strong>23. CSScomb CSS属性排序:</strong><br>有时候看看自己写的CSS文件，会不会觉得属性很乱查找不易维护难？CSScomb可以按照一定的CSS属性排序规则，将杂乱无章的CSS属性进行重新排序。选中要排序的CSS代码，按Ctrl+Shift+C，即可对CSS属性重新排序了，代码从此简洁有序易维护，如果不款选代码则插件将排序文件中所有的CSS属性。当然，可以自己自定义CSS属性排序规则，打开插件目录里的CSScomb.sublime-settings文件，更改里面的CSS属性顺序就行了。因为这个插件使用PHP写的，要使他工作需要在环境变量中添加PHP的路径，具体请看github上的说明。</p>
+<p><strong>24. SublimeTmpl 快速生成文件模板</strong><br>一直都很奇怪为什么sublime text 3没有新建文件模板的功能，像html头部的DTD声明每次都要复制粘贴。用SublimeTmpl这款插件终于可以解脱了，SublimeTmpl能新建html、css、javascript、php、python、ruby六种类型的文件模板，所有的文件模板都在插件目录的templates文件夹里，可以自定义编辑文件模板。<br>SublimeTmpl默认的快捷键:  </p>
+<blockquote>
+<p>ctrl+alt+h html<br>ctrl+alt+j javascript<br>ctrl+alt+c css<br>ctrl+alt+p php<br>ctrl+alt+r ruby<br>ctrl+alt+shift+p python</p>
+</blockquote>
+<p><strong>25.Javascript-API-Completions:</strong><br>支持Javascript、JQuery、Twitter Bootstrap框架、HTML5标签属性提示的插件，是少数支持sublime text 3的后缀提示的插件，HTML5标签提示sublime text3自带，不过JQuery提示还是很有用处的，也可设置要提示的语言。</p>
+<p><strong>26.SFTP：快速编辑远程服务器文件</strong><br>在Win下用Xftp 和 WinScp，被这种需要切换点击or F5刷新的手动操作蛋疼到无语；故此一遇见这SFTP，顿觉这世界都美好了许多。当然Sublime下面也有些其他同步插件，比如FtpSnyc，但是配置起来的错误提示一点都不人性化，就毫不留情的舍弃了。Sublime下有SFTP，只要Ctrl+S即可同步本地到服务器，妥妥的爽歪歪有么有？如何配置，请参见在 Sublime Text中使用 SFTP 插件快速编辑远程服务器文件;如欲使用FtpSync可参见Sublime使用及FtpSync远程同步；大道至简，因简而悦；开心垒码，值得折腾。</p>
+<p><strong>27.WakaTime – 记录你的Code时间;</strong><br>WakaTime可以做到精确地统计到你花在某个项目上的时间;WakaTime针对不同的IDE，拥有不同的插件，在Sublime上安装着插件，就能统计到我使用Sublime进行的所有项目的行为。可以高效管理和知晓自己code时间；并且，统计完善, 适合发朋友圈装逼（如果你喜欢的话）~</p>
+<p><strong>28.advancedNewFile： 快速创建文件</strong><br>当我们在 Sublime Text 编辑器里我们可以通过快捷键command+n(win: ctrl+n),来新建一个文件，然后command+s(Win:ctrl+s)进行弹出保存框，填写文件名进行保存。还是老问题，麻烦！！我们接下来就通过安装advancedNewFile插件来提升我们在Sublime Text编辑器下的创建文件速度。</p>
+<p>关乎其使用，安装完成之后，运用快捷键<code>command+alt+n(win: ctrl+alt+n)</code><br>，Sublime Text底部会弹出输入框；我们只需在这个输入框里输入我们需要新建的文件名回车即可（我们甚至可以带路径,譬如:src/components/perfect.vue;这就会在当前项目目录下，建立该文件；需要注意的是这路径前面不可加 ‘/‘, 这会使得建立的路径成为用户目录，而非改项目目录）。默认情况下文件会存储在当前目录，如果当前没有目录，会存储在用户的家目录。</p>
+<p>剩下些许其他的可以按需安装的插件，比如：</p>
+<p>ConvertToUTF8 支持 GBK, BIG5, EUC-KR, EUC-JP, Shift_JIS 等编码的插件<br>Bracket Highlighter 用于匹配括号，引号和html标签。对于很长的代码很有用。安装好之后，不需要设置插件会自动生效<br>DocBlockr 可以自动生成PHPDoc风格的注释。它支持的语言有Javascript, PHP, ActionScript, CoffeeScript, Java, Objective C, C, C++</p>
+<p><font color="purple">Emmet(Zen Coding)</font>快速生成HTML代码段的插件，强大到无与伦比:可以超快速编写HTML/CSS/JS，当然这个插件还支持多种编译环境，如常见的：Eclipse/Aptana、Coda、Notepad++、Adobe Dreamweaver、TextMate等，web开发必备！！！。<br>jsFormat 格式化js代码，懂者自懂；强迫症Coder必备！默认快捷键Ctrl+Alt+F。<br>phpFormat 格式化php代码，懂者自懂；强迫症Coder必备！</p>
+<p><strong>CSS Compact Expand CSS属性展开收缩:</strong>写CSS的盆友，喜欢将其写多行还是一行(个人喜欢将其格式化为多行)？如果阅读别人的代码不符合自己的习惯，可以用CSS Compact Expand这个插件将CSS格式化一下，按 Ctrl+Alt+[ 收缩CSS代码为一行显示，按 Ctrl+Alt+] 展开CSS代码为多行显示；强迫症Coder必备！。</p>
+<p><strong>Autoprefixer插件</strong>：这是一款CSS3私有前缀自动补全插件；该插件使用CanIUse资料库（当然，SublimeText自然也有<font color="purple">CanIUse</font>这个插件咯），能精准判断哪些属性需要什么前缀，与CssComb插件一样，该插件也需要系统已安装Node.js环境；使用方法：在输入CSS3属性后（冒号前）按Tab键即可。</p>
+<p><strong>YUI Compressor</strong>：压缩JS和CSS文件，按F7键后，若压缩当前文件（demo.js），则压缩后的文件（demo.min.js）保存在该文件的同级目录，需要安装java的JDK。使用方法：YUI Compressor</p>
+<p><strong>ClickableURLs</strong>：可点击的URL<br>使用小插件ClickableURLs可以让文件中的URL能够点击。</p>
+<p><strong>Vue Syntax Highlight:</strong> <code>Vue(*.vue)</code>高亮插件；于前端而言，使用Vue框架开发，是一个很酷爽的存在，那么此插件也就很有必要拥有；同时Jade, SASS等插件也是很有拥有的必要，谁用谁知道(说到用vue, 这vue-cli就蛮有使用的必要了( Webpack, Eslint, Test等都配置完善，十分贴心); 而写Js代码，于稍大项目 Eslint 就很有使用必要，而 sublime 在针对使用 Eslint 的 *.vue文件，目测还没有很好格式化插件，坐等诞生</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/26/Meta标签/" rel="next" title="你对 Meta 标签了解多少？">
+                <i class="fa fa-chevron-left"></i> 你对 Meta 标签了解多少？
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/26/小程序知识点/" rel="prev" title="小程序开发解答！如何禁止页面滑动">
+                小程序开发解答！如何禁止页面滑动 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Joey" />
+          <p class="site-author-name" itemprop="name">Joey</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">Artikel</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、安装及安装emmet插件"><span class="nav-number">1.</span> <span class="nav-text">一、安装及安装emmet插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-sublime常用插件："><span class="nav-number">2.</span> <span class="nav-text">二. sublime常用插件：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Joey</span>
+</div>
+
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Joey's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="1、使用css实现一个持续的动画效果12345animation:mymove 5s infinite@keyframes mymove &amp;#123;from &amp;#123;top:0px;&amp;#125;to &amp;#123;top:200px;&amp;#125;&amp;#125; 主要考：animation的用法    值 描述     animation-name 规定需要绑定到选择器的 keyframe名称">
+<meta property="og:type" content="article">
+<meta property="og:title" content="阿里巴巴前端面试总结(题目+答案)">
+<meta property="og:url" content="http://yoursite.com/2018/03/26/2018阿里巴巴面试题/index.html">
+<meta property="og:site_name" content="Joey&#39;s Blog">
+<meta property="og:description" content="1、使用css实现一个持续的动画效果12345animation:mymove 5s infinite@keyframes mymove &amp;#123;from &amp;#123;top:0px;&amp;#125;to &amp;#123;top:200px;&amp;#125;&amp;#125; 主要考：animation的用法    值 描述     animation-name 规定需要绑定到选择器的 keyframe名称">
+<meta property="og:updated_time" content="2018-03-03T10:20:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="阿里巴巴前端面试总结(题目+答案)">
+<meta name="twitter:description" content="1、使用css实现一个持续的动画效果12345animation:mymove 5s infinite@keyframes mymove &amp;#123;from &amp;#123;top:0px;&amp;#125;to &amp;#123;top:200px;&amp;#125;&amp;#125; 主要考：animation的用法    值 描述     animation-name 规定需要绑定到选择器的 keyframe名称">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/03/26/2018阿里巴巴面试题/"/>
+
+
+
+
+
+  <title>阿里巴巴前端面试总结(题目+答案) | Joey's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Joey's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/2018阿里巴巴面试题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Joey">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joey's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">阿里巴巴前端面试总结(题目+答案)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-26T10:54:44+08:00">
+                2018-03-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1、使用css实现一个持续的动画效果"><a href="#1、使用css实现一个持续的动画效果" class="headerlink" title="1、使用css实现一个持续的动画效果"></a>1、使用css实现一个持续的动画效果</h2><pre><code><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">animation</span>:mymove <span class="number">5s</span> infinite</span><br><span class="line"><span class="variable">@keyframes</span> mymove &#123;</span><br><span class="line">from &#123;<span class="attribute">top</span>:<span class="number">0px</span>;&#125;</span><br><span class="line"><span class="selector-tag">to</span> &#123;<span class="attribute">top</span>:<span class="number">200px</span>;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre><p>主要考：<code>animation</code>的用法</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">值</th>
+<th style="text-align:right">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">animation-name</td>
+<td style="text-align:right">规定需要绑定到选择器的 keyframe名称</td>
+</tr>
+<tr>
+<td style="text-align:left">animation-duration</td>
+<td style="text-align:right">规定完成动画所花费的时间，以秒或毫秒计</td>
+</tr>
+<tr>
+<td style="text-align:left">animation-timing-function</td>
+<td style="text-align:right">规定动画的速度曲线</td>
+</tr>
+<tr>
+<td style="text-align:left">animation-delay</td>
+<td style="text-align:right">规定动画开始之前的延迟</td>
+</tr>
+<tr>
+<td style="text-align:left">animation-iteration-count</td>
+<td style="text-align:right">规定动画应该播放的次数</td>
+</tr>
+<tr>
+<td style="text-align:left">animation-direction</td>
+<td style="text-align:right">规定是否应该轮流反向播放动画</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2、使用js实现一个持续的动画效果"><a href="#2、使用js实现一个持续的动画效果" class="headerlink" title="2、使用js实现一个持续的动画效果"></a>2、使用js实现一个持续的动画效果</h2><p>最开始的思路是用定时器实现，最后没有想的太完整，面试官给出的答案是用<code>requestAnimationFrame</code>。</p>
+<pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> e = <span class="built_in">document</span>.getElementById(<span class="string">'e'</span>)</span><br><span class="line"><span class="keyword">var</span> falg = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">var</span> left = <span class="number">0</span>;</span><br><span class="line">setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">	left == <span class="number">0</span> ? flag = <span class="literal">true</span> : left == <span class="number">100</span> ? flag = <span class="literal">false</span> : <span class="string">''</span></span><br><span class="line">	flag ? e.style.left = <span class="string">' $&#123;left++&#125;px'</span> : e.style.left = <span class="string">'$&#123;left--&#125;px'</span></span><br><span class="line">&#125;,<span class="number">1000</span>/<span class="number">60</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//兼容性处理</span></span><br><span class="line"><span class="built_in">window</span>.requestAnimationFrame = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">window</span>.requestAnimationFrame       ||</span><br><span class="line">		   <span class="built_in">window</span>.webkitRequestAnimationFrame ||</span><br><span class="line">		   <span class="built_in">window</span>.mozRequestAnaimationFrame   ||</span><br><span class="line">		   <span class="function"><span class="keyword">function</span>(<span class="params">callback</span>)</span>&#123;</span><br><span class="line">			  <span class="built_in">window</span>.setTimeout(callback,<span class="number">100</span>/<span class="number">60</span>)</span><br><span class="line">		&#125;;</span><br><span class="line"></span><br><span class="line">&#125;) ();</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> e = <span class="built_in">document</span>.getElementById(<span class="string">"e"</span>);</span><br><span class="line"><span class="keyword">var</span> flag = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">var</span> left = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">render</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	left == <span class="number">0</span> ? flag = <span class="literal">true</span> : left == <span class="number">100</span> ? flag = <span class="literal">false</span> :<span class="string">''</span>;</span><br><span class="line">	flag ？ e.style.left = <span class="string">'$&#123;left++&#125;px'</span>;</span><br><span class="line">		e.style.left = <span class="string">'$&#123;left--&#125;px'</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">(<span class="function"><span class="keyword">function</span> <span class="title">animloop</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	render();</span><br><span class="line">	requestAnimationFrame (animloop);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+</code></pre><p>使用<code>requestAnimationFrame</code>的优势：</p>
+<ul>
+<li>浏览器可以优化并行的动画动作，更合理的重新排列动作序列，并把能够合并的动作放在一个渲染周期内完成，从而呈现出更流畅的动画效果</li>
+<li>解决毫秒的不精确性</li>
+<li>避免过度渲染（渲染频率太高、 tab 不可见暂停等等）<br>注： <code>requestAnimFrame</code> 和 定时器一样也头一个类似的清除方法<code>cancelAnimationFrame</code>。</li>
+</ul>
+<h2 id="3、右边宽度固定，左边自适应"><a href="#3、右边宽度固定，左边自适应" class="headerlink" title="3、右边宽度固定，左边自适应"></a>3、右边宽度固定，左边自适应</h2><h3 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h3><pre><code><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">body&#123;</span></span><br><span class="line"><span class="css">	<span class="selector-tag">display</span><span class="selector-pseudo">:flex</span>;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.left</span>&#123;</span></span><br><span class="line"><span class="undefined">	background-color: rebeccapurple;</span></span><br><span class="line"><span class="undefined">  		height: 200px;</span></span><br><span class="line"><span class="undefined">  		flex: 1;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.right</span>&#123;</span></span><br><span class="line"><span class="undefined">	background-color: red;</span></span><br><span class="line"><span class="undefined">  		height: 200px;</span></span><br><span class="line"><span class="undefined">  		width: 100px;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h3><pre><code><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    div &#123;</span></span><br><span class="line"><span class="undefined">        height: 200px;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.left</span> &#123;</span></span><br><span class="line"><span class="undefined">        float: right;</span></span><br><span class="line"><span class="undefined">        width: 200px;</span></span><br><span class="line"><span class="undefined">        background-color: rebeccapurple;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.right</span> &#123;</span></span><br><span class="line"><span class="undefined">        margin-right: 200px;</span></span><br><span class="line"><span class="undefined">        background-color: red;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</code></pre><h2 id="4、水平垂直居中"><a href="#4、水平垂直居中" class="headerlink" title="4、水平垂直居中"></a>4、水平垂直居中</h2><h3 id="第一种-1"><a href="#第一种-1" class="headerlink" title="第一种"></a>第一种</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#container</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>:relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#center</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">position</span>:absolute;</span><br><span class="line">    <span class="attribute">top</span>:<span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">left</span>:<span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(-50%,-50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="第二种-1"><a href="#第二种-1" class="headerlink" title="第二种"></a>第二种</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#container</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>:relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#center</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">position</span>:absolute;</span><br><span class="line">    <span class="attribute">top</span>:<span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">left</span>:<span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">margin</span>:-<span class="number">50px</span> <span class="number">0</span> <span class="number">0</span> -<span class="number">50px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="第三种"><a href="#第三种" class="headerlink" title="第三种"></a>第三种</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#container</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>:relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#center</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>:absolute;</span><br><span class="line">    <span class="attribute">margin</span>:auto;</span><br><span class="line">    <span class="attribute">top</span>:<span class="number">0</span>;</span><br><span class="line">    <span class="attribute">bottom</span>:<span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>:<span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>:<span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="第四种-flex"><a href="#第四种-flex" class="headerlink" title="第四种 flex"></a>第四种 flex</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#container</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>:flex;</span><br><span class="line">    <span class="attribute">justify-content</span>:center;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="5、四种定位的区别"><a href="#5、四种定位的区别" class="headerlink" title="5、四种定位的区别"></a>5、四种定位的区别</h2><ul>
+<li>static 是默认值</li>
+<li>relative 相对定位 相对于自身原有位置进行偏移，仍处于标准文档流中</li>
+<li>absolute 绝对定位 相对于最近的已定位的祖先元素, 有已定位(指 position不是 static的元素)祖先元素, 以最近的祖先元素为参考标准。如果无已定位祖先元素, 以 body元素为偏移参照基准, 完全脱离了标准文档流。</li>
+<li>fixed 固定定位的元素会相对于视窗来定位,这意味着即便页面滚动，它还是会停留在相同的位置。一个固定定位元素不会保留它原本在页面应有的空隙。</li>
+</ul>
+<h2 id="6、let与var的区别？"><a href="#6、let与var的区别？" class="headerlink" title="6、let与var的区别？"></a>6、let与var的区别？</h2><p>let 为 ES6 新添加申明变量的命令，它类似于 var，但是有以下不同：</p>
+<ul>
+<li>var 声明的变量，其作用域为该语句所在的函数内，且存在变量提升现象</li>
+<li>let 声明的变量，其作用域为该语句所在的代码块内，不存在变量提升</li>
+<li>let 不允许重复声明.</li>
+</ul>
+<h2 id="7、为什么-var-可以重复声明？"><a href="#7、为什么-var-可以重复声明？" class="headerlink" title="7、为什么 var 可以重复声明？"></a>7、为什么 var 可以重复声明？</h2><p>当我们执行代码时，我们可以简单的理解为新变量分配一块儿内存，命名为 a，并赋值为 2，但在运行的时候编译器与引擎还会进行两项额外的操作：判断变量是否已经声明：</p>
+<ul>
+<li>首先编译器对代码进行分析拆解，从左至右遇见 var a，则编译器会询问作用域是否已经存在叫 a 的变量了，如果不存在，则招呼作用域声明一个新的变量 a，若已经存在，则忽略 var 继续向下编译，这时 a = 2被编译成可执行的代码供引擎使用。</li>
+<li>引擎遇见 a=2时同样会询问在当前的作用域下是否有变量 a，若存在，则将 a赋值为 2（由于第一步编译器忽略了重复声明的var，且作用域中已经有 a，所以重复声明会发生值得覆盖而并不会报错）。若不存在，则顺着作用域链向上查找，若最终找到了变量 a则将其赋值 2，若没有找到，则招呼作用域声明一个变量 a并赋值为 2。 参考链接</li>
+</ul>
+<h2 id="8、封装一个函数，参数是定时器的时间，-then执行回调函数。"><a href="#8、封装一个函数，参数是定时器的时间，-then执行回调函数。" class="headerlink" title="8、封装一个函数，参数是定时器的时间，.then执行回调函数。"></a>8、封装一个函数，参数是定时器的时间，.then执行回调函数。</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sleep</span> (<span class="params">time</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> setTimeout(resolve,time));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="9、一个关于-this-指向的问题。"><a href="#9、一个关于-this-指向的问题。" class="headerlink" title="9、一个关于 this 指向的问题。"></a>9、一个关于 this 指向的问题。</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">obj = &#123;</span><br><span class="line">	name:<span class="string">'a'</span>,</span><br><span class="line">	getName:function()&#123;</span><br><span class="line">		console.log(this.name)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">var</span> fn = obj.getName</span><br><span class="line">obj.getName()</span><br><span class="line"><span class="selector-tag">var</span> fn2 = obj.getName()</span><br><span class="line"><span class="function"><span class="title">fn</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="title">fn2</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="10、CommonJS-中的-require-exports-和-ES6-中的-import-export-区别？"><a href="#10、CommonJS-中的-require-exports-和-ES6-中的-import-export-区别？" class="headerlink" title="10、CommonJS 中的 require/exports 和 ES6 中的 import/export 区别？"></a>10、CommonJS 中的 require/exports 和 ES6 中的 import/export 区别？</h2><ul>
+<li>CommonJS 模块的重要特性是加载时执行，即脚本代码在 require 的时候，就会全部执行。一旦出现某个模块被”循环加载”，就只输出已经执行的部分，还未执行的部分不会输出。</li>
+<li>ES6 模块是动态引用，如果使用 import 从一个模块加载变量，那些变量不会被缓存，而是成为一个指向被加载模块的引用，需要开发者自己保证，真正取值的时候能够取到值。</li>
+<li>import/export 最终都是编译为 require/exports 来执行的。</li>
+<li>CommonJS 规范规定，每个模块内部， module 变量代表当前模块。这个变量是一个对象，它的 exports 属性（即module.exports ）是对外的接口。加载某个模块，其实是加载该模块的 module.exports 属性。</li>
+<li>export 命令规定的是对外的接口，必须与模块内部的变量建立一一对应关系。</li>
+</ul>
+<h2 id="11、一行代码实现数组去重？"><a href="#11、一行代码实现数组去重？" class="headerlink" title="11、一行代码实现数组去重？"></a>11、一行代码实现数组去重？</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[...new Set([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>,'a',<span class="number">1</span>,'a'])]</span><br></pre></td></tr></table></figure>
+<h2 id="12、使用addEventListener点击li弹出内容，并且动态添加li之后有效"><a href="#12、使用addEventListener点击li弹出内容，并且动态添加li之后有效" class="headerlink" title="12、使用addEventListener点击li弹出内容，并且动态添加li之后有效"></a>12、使用addEventListener点击li弹出内容，并且动态添加li之后有效</h2><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;<span class="built_in">li</span>&gt;<span class="number">1</span>&lt;/<span class="built_in">li</span>&gt;</span><br><span class="line">    &lt;<span class="built_in">li</span>&gt;<span class="number">2</span>&lt;/<span class="built_in">li</span>&gt;</span><br><span class="line">    &lt;<span class="built_in">li</span>&gt;<span class="number">3</span>&lt;/<span class="built_in">li</span>&gt;</span><br><span class="line">    &lt;<span class="built_in">li</span>&gt;<span class="number">4</span>&lt;/<span class="built_in">li</span>&gt;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line"></span><br><span class="line"><span class="built_in">var</span> ulNode = document.getElementById(<span class="string">"ul"</span>);</span><br><span class="line">	ulNode.addEventListener('click',function(e)&#123;</span><br><span class="line">		<span class="keyword">if</span> (e.target &amp;&amp; e.target.nodeName.toUpperCase() == <span class="string">"LI"</span>)&#123;</span><br><span class="line">			alert(e.target.innerHTML)</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">&#125;,<span class="literal">false</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="13、怎么判断两个对象相等？"><a href="#13、怎么判断两个对象相等？" class="headerlink" title="13、怎么判断两个对象相等？"></a>13、怎么判断两个对象相等？</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">obj=&#123;</span><br><span class="line">	<span class="selector-tag">a</span>:<span class="number">1</span>,</span><br><span class="line">	<span class="selector-tag">b</span>:<span class="number">2</span></span><br><span class="line">&#125;</span><br><span class="line">obj2=&#123;</span><br><span class="line">	<span class="selector-tag">a</span>:<span class="number">1</span>,</span><br><span class="line">	<span class="selector-tag">b</span>:<span class="number">2</span></span><br><span class="line">&#125;</span><br><span class="line">obj3=&#123;</span><br><span class="line">	<span class="selector-tag">a</span>:<span class="number">1</span>,</span><br><span class="line">	<span class="selector-tag">b</span>:<span class="number">2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以转换为字符串来判断</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">JSON</span>.stringify(obj) == <span class="built_in">JSON</span>.stringify(obj2);<span class="comment">//true</span></span><br><span class="line"><span class="built_in">JSON</span>.stringify(obj) == <span class="built_in">JSON</span>.stringify(obj3);<span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+<h2 id="13、项目做过哪些性能优化？"><a href="#13、项目做过哪些性能优化？" class="headerlink" title="13、项目做过哪些性能优化？"></a>13、项目做过哪些性能优化？</h2><ul>
+<li>减少 HTTP 请求数</li>
+<li>减少 DNS 查询</li>
+<li>使用 CDN</li>
+<li>避免重定向</li>
+<li>图片懒加载</li>
+<li>减少 DOM 元素数量</li>
+<li>减少 DOM 操作</li>
+<li>使用外部 JavaScript 和 CSS</li>
+<li>压缩 JavaScript 、 CSS 、字体、图片等</li>
+<li>优化 CSS Sprite</li>
+<li>使用 iconfont</li>
+<li>字体裁剪</li>
+<li>多域名分发划分内容到不同域名</li>
+<li>尽量减少 iframe 使用</li>
+<li>避免图片 src 为空</li>
+<li>把脚本放在页面底部</li>
+</ul>
+<h2 id="14、模块化开发是怎么做的？"><a href="#14、模块化开发是怎么做的？" class="headerlink" title="14、模块化开发是怎么做的？"></a>14、模块化开发是怎么做的？</h2><p>使用命名空间。</p>
+<h2 id="15、Vue-router-跳转和-location-href-有什么区别？"><a href="#15、Vue-router-跳转和-location-href-有什么区别？" class="headerlink" title="15、Vue router 跳转和 location.href 有什么区别？"></a>15、Vue router 跳转和 location.href 有什么区别？</h2><p><code>router</code> 是 <code>hash</code> 改变 <code>location.href</code> 是页面跳转，刷新页面</p>
+<h2 id="16、Vue-双向绑定实现原理？"><a href="#16、Vue-双向绑定实现原理？" class="headerlink" title="16、Vue 双向绑定实现原理？"></a>16、Vue 双向绑定实现原理？</h2><p>通过 <code>Object.defineProperty</code> 实现的</p>
+<h2 id="17、实现一下双向绑定"><a href="#17、实现一下双向绑定" class="headerlink" title="17、实现一下双向绑定"></a>17、实现一下双向绑定</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"txt"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"show-txt"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="actionscript">        <span class="keyword">var</span> obj = &#123;&#125;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">Object</span>.defineProperty(obj, <span class="string">'txt'</span>, &#123;</span></span><br><span class="line"><span class="actionscript">            <span class="keyword">get</span>: <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">                <span class="keyword">return</span> obj</span></span><br><span class="line"><span class="undefined">            &#125;,</span></span><br><span class="line"><span class="actionscript">            <span class="keyword">set</span>: <span class="function"><span class="keyword">function</span> <span class="params">(newValue)</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">document</span>.getElementById(<span class="string">'txt'</span>).value = newValue</span></span><br><span class="line"><span class="javascript">                <span class="built_in">document</span>.getElementById(<span class="string">'show-txt'</span>).innerHTML = newValue</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">        &#125;)</span></span><br><span class="line"><span class="javascript">        <span class="built_in">document</span>.addEventListener(<span class="string">'keyup'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span></span><br><span class="line"><span class="undefined">            obj.txt = e.target.value</span></span><br><span class="line"><span class="undefined">        &#125;)</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="18、React-和-Vue-有什么区别？"><a href="#18、React-和-Vue-有什么区别？" class="headerlink" title="18、React 和 Vue 有什么区别？"></a>18、React 和 Vue 有什么区别？</h2><h2 id="19、Set-和-Map-数据结构"><a href="#19、Set-和-Map-数据结构" class="headerlink" title="19、Set 和 Map 数据结构"></a>19、Set 和 Map 数据结构</h2><ul>
+<li>ES6 提供了新的数据结构 Set 它类似于数组，但是成员的值都是唯一的，没有重复的值。</li>
+<li>ES6 提供了 Map 数据结构。它类似于对象，也是键值对的集合，但是“键”的范围不限于字符串，各种类型的值（包括对象）都可以当作键。也就是说， Object 结构提供了“字符串—值”的对应， Map 结构提供了“值—值”的对应，是一种更完善的 Hash结构实现。</li>
+</ul>
+<h2 id="20、WeakMap-和-Map-的区别"><a href="#20、WeakMap-和-Map-的区别" class="headerlink" title="20、WeakMap 和 Map 的区别?"></a>20、WeakMap 和 Map 的区别?</h2><ul>
+<li>WeakMap 结构与 Map 结构基本类似，唯一的区别是它只接受对象作为键名（ null 除外），不接受其他类型的值作为键名，而且键名所指向的对象，不计入垃圾回收机制。</li>
+<li>WeakMap 最大的好处是可以避免内存泄漏。一个仅被 WeakMap 作为 key 而引用的对象，会被垃圾回收器回收掉。</li>
+<li>WeakMap 拥有和 Map 类似的 set(key, value) 、 get(key)、has(key)、 delete(key) 和 clear() 方法, 没有任何与迭代有关的属性和方法。</li>
+</ul>
+<h2 id="21、重排和重绘"><a href="#21、重排和重绘" class="headerlink" title="21、重排和重绘"></a>21、重排和重绘</h2><ul>
+<li>部分渲染树（或者整个渲染树）需要重新分析并且节点尺寸需要重新计算。这被称为重排。注意这里至少会有一次重排-初始化页面布局。</li>
+<li>由于节点的几何属性发生改变或者由于样式发生改变，例如改变元素背景色时，屏幕上的部分内容需要更新。这样的更新被称为重绘。</li>
+</ul>
+<h2 id="22、什么情况会触发重排和重绘？"><a href="#22、什么情况会触发重排和重绘？" class="headerlink" title="22、什么情况会触发重排和重绘？"></a>22、什么情况会触发重排和重绘？</h2><ul>
+<li>添加、删除、更新 DOM 节点</li>
+<li>通过 display: none 隐藏一个 DOM 节点-触发重排和重绘</li>
+<li>通过 visibility: hidden 隐藏一个 DOM 节点-只触发重绘，因为没有几何变化</li>
+<li>移动或者给页面中的 DOM 节点添加动画</li>
+<li>添加一个样式表，调整样式属性</li>
+<li>用户行为，例如调整窗口大小，改变字号，或者滚动。</li>
+</ul>
+<h2 id="20、浏览器缓存"><a href="#20、浏览器缓存" class="headerlink" title="20、浏览器缓存"></a>20、浏览器缓存</h2><p>浏览器缓存分为强缓存和协商缓存。当客户端请求某个资源时，获取缓存的流程如下：</p>
+<ul>
+<li>先根据这个资源的一些 http header 判断它是否命中强缓存，如果命中，则直接从本地获取缓存资源，不会发请求到服务器；</li>
+<li>当强缓存没有命中时，客户端会发送请求到服务器，服务器通过另一些 request header验证这个资源是否命中协商缓存，称为 http再验证，如果命中，服务器将请求返回，但不返回资源，而是告诉客户端直接从缓存中获取，客户端收到返回后就会从缓存中获取资源；</li>
+<li>强缓存和协商缓存共同之处在于，如果命中缓存，服务器都不会返回资源；</li>
+<li>区别是，强缓存不对发送请求到服务器，但协商缓存会。</li>
+<li>当协商缓存也没命中时，服务器就会将资源发送回客户端。</li>
+<li>当 <code>ctrl+f5</code> 强制刷新网页时，直接从服务器加载，跳过强缓存和协商缓存；</li>
+<li>当 f5 刷新网页时，跳过强缓存，但是会检查协商缓存；</li>
+</ul>
+<p><strong>强缓存</strong></p>
+<ul>
+<li>Expires（该字段是 http1.0 时的规范，值为一个绝对时间的 GMT 格式的时间字符串，代表缓存资源的过期时间）</li>
+<li>Cache-Control:max-age（该字段是 http1.1 的规范，强缓存利用其 max-age 值来判断缓存资源的最大生命周期，它的值单位为秒）</li>
+</ul>
+<p><strong>协商缓存</strong></p>
+<ul>
+<li>Last-Modified（值为资源最后更新时间，随服务器response返回）</li>
+<li>If-Modified-Since（通过比较两个时间来判断资源在两次请求期间是否有过修改，如果没有修改，则命中协商缓存）</li>
+<li>ETag（表示资源内容的唯一标识，随服务器response返回）</li>
+<li>If-None-Match（服务器通过比较请求头部的If-None-Match与当前资源的ETag是否一致来判断资源是否在两次请求之间有过修改，如果没有修改，则命中协商缓存）</li>
+</ul>
+<p>END</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/26/小程序知识点/" rel="next" title="小程序开发解答！如何禁止页面滑动">
+                <i class="fa fa-chevron-left"></i> 小程序开发解答！如何禁止页面滑动
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Joey" />
+          <p class="site-author-name" itemprop="name">Joey</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">Artikel</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、使用css实现一个持续的动画效果"><span class="nav-number">1.</span> <span class="nav-text">1、使用css实现一个持续的动画效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、使用js实现一个持续的动画效果"><span class="nav-number">2.</span> <span class="nav-text">2、使用js实现一个持续的动画效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、右边宽度固定，左边自适应"><span class="nav-number">3.</span> <span class="nav-text">3、右边宽度固定，左边自适应</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一种"><span class="nav-number">3.1.</span> <span class="nav-text">第一种</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二种"><span class="nav-number">3.2.</span> <span class="nav-text">第二种</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、水平垂直居中"><span class="nav-number">4.</span> <span class="nav-text">4、水平垂直居中</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一种-1"><span class="nav-number">4.1.</span> <span class="nav-text">第一种</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二种-1"><span class="nav-number">4.2.</span> <span class="nav-text">第二种</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三种"><span class="nav-number">4.3.</span> <span class="nav-text">第三种</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第四种-flex"><span class="nav-number">4.4.</span> <span class="nav-text">第四种 flex</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、四种定位的区别"><span class="nav-number">5.</span> <span class="nav-text">5、四种定位的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、let与var的区别？"><span class="nav-number">6.</span> <span class="nav-text">6、let与var的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、为什么-var-可以重复声明？"><span class="nav-number">7.</span> <span class="nav-text">7、为什么 var 可以重复声明？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、封装一个函数，参数是定时器的时间，-then执行回调函数。"><span class="nav-number">8.</span> <span class="nav-text">8、封装一个函数，参数是定时器的时间，.then执行回调函数。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9、一个关于-this-指向的问题。"><span class="nav-number">9.</span> <span class="nav-text">9、一个关于 this 指向的问题。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10、CommonJS-中的-require-exports-和-ES6-中的-import-export-区别？"><span class="nav-number">10.</span> <span class="nav-text">10、CommonJS 中的 require/exports 和 ES6 中的 import/export 区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11、一行代码实现数组去重？"><span class="nav-number">11.</span> <span class="nav-text">11、一行代码实现数组去重？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12、使用addEventListener点击li弹出内容，并且动态添加li之后有效"><span class="nav-number">12.</span> <span class="nav-text">12、使用addEventListener点击li弹出内容，并且动态添加li之后有效</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13、怎么判断两个对象相等？"><span class="nav-number">13.</span> <span class="nav-text">13、怎么判断两个对象相等？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13、项目做过哪些性能优化？"><span class="nav-number">14.</span> <span class="nav-text">13、项目做过哪些性能优化？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14、模块化开发是怎么做的？"><span class="nav-number">15.</span> <span class="nav-text">14、模块化开发是怎么做的？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15、Vue-router-跳转和-location-href-有什么区别？"><span class="nav-number">16.</span> <span class="nav-text">15、Vue router 跳转和 location.href 有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16、Vue-双向绑定实现原理？"><span class="nav-number">17.</span> <span class="nav-text">16、Vue 双向绑定实现原理？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17、实现一下双向绑定"><span class="nav-number">18.</span> <span class="nav-text">17、实现一下双向绑定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18、React-和-Vue-有什么区别？"><span class="nav-number">19.</span> <span class="nav-text">18、React 和 Vue 有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19、Set-和-Map-数据结构"><span class="nav-number">20.</span> <span class="nav-text">19、Set 和 Map 数据结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20、WeakMap-和-Map-的区别"><span class="nav-number">21.</span> <span class="nav-text">20、WeakMap 和 Map 的区别?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#21、重排和重绘"><span class="nav-number">22.</span> <span class="nav-text">21、重排和重绘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22、什么情况会触发重排和重绘？"><span class="nav-number">23.</span> <span class="nav-text">22、什么情况会触发重排和重绘？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20、浏览器缓存"><span class="nav-number">24.</span> <span class="nav-text">20、浏览器缓存</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Joey</span>
+</div>
+
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

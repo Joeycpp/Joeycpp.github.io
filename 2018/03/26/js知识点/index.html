@@ -83,8 +83,6 @@
 
 
 
-  
-
 
   <link rel="alternate" href="/atom.xml" title="Joey's Blog" type="application/atom+xml" />
 
@@ -98,16 +96,16 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="1.对json的理解回答一：  JSON对象：以“{”开始，以“}”结束，里面则是一系列的键（key）值（value）对，键和值用“:”分开，每对键值对之间用“,”分开。参考以下语法结构：{key1:value1,key2:value2,key3:value3…}其中键（key）是字符串，而值（value）可以是字符串，数值，true,false,null,对象或数组，也就是说某个键（key）的值">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2018/03/26/hello-world/index.html">
+<meta property="og:title" content="JavaScript中必须要掌握的知识">
+<meta property="og:url" content="http://yoursite.com/2018/03/26/js知识点/index.html">
 <meta property="og:site_name" content="Joey&#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:updated_time" content="2017-09-12T03:46:02.000Z">
+<meta property="og:description" content="1.对json的理解回答一：  JSON对象：以“{”开始，以“}”结束，里面则是一系列的键（key）值（value）对，键和值用“:”分开，每对键值对之间用“,”分开。参考以下语法结构：{key1:value1,key2:value2,key3:value3…}其中键（key）是字符串，而值（value）可以是字符串，数值，true,false,null,对象或数组，也就是说某个键（key）的值">
+<meta property="og:updated_time" content="2017-09-20T10:09:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="JavaScript中必须要掌握的知识">
+<meta name="twitter:description" content="1.对json的理解回答一：  JSON对象：以“{”开始，以“}”结束，里面则是一系列的键（key）值（value）对，键和值用“:”分开，每对键值对之间用“,”分开。参考以下语法结构：{key1:value1,key2:value2,key3:value3…}其中键（key）是字符串，而值（value）可以是字符串，数值，true,false,null,对象或数组，也就是说某个键（key）的值">
 
 
 
@@ -136,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/26/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/26/js知识点/"/>
 
 
 
 
 
-  <title>Hello World | Joey's Blog</title>
+  <title>JavaScript中必须要掌握的知识 | Joey's Blog</title>
   
 
 
@@ -265,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/js知识点/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Joey">
@@ -282,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">JavaScript中必须要掌握的知识</h1>
         
 
         <div class="post-meta">
@@ -332,15 +330,49 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h3 id="1-对json的理解"><a href="#1-对json的理解" class="headerlink" title="1.对json的理解"></a>1.对json的理解</h3><p>回答一：</p>
+<ol>
+<li>JSON对象：以“{”开始，以“}”结束，里面则是一系列的键（key）值（value）对，键和值用“:”分开，每对键值对之间用“,”分开。参考以下语法结构：{key1:value1,key2:value2,key3:value3…}其中键（key）是字符串，而值（value）可以是字符串，数值，true,false,null,对象或数组，也就是说某个键（key）的值（value）可以是一个数组，数组里面又是一些JSON对象，这种表示稍微复杂一些，但是参照这些理解可以很容易分辨出来。 </li>
+<li>JSON数组：以”[”开始，”]”结束，如同程序语言一样，例如C#，Button[] btnArray,则BtnArray是一个Button类型的数组，里面就存放Button类型的对象，那么JSON数组也一样，里面存放的也是JSON对象.</li>
+</ol>
+<p>回答二：</p>
+<ol>
+<li>JSON 指的是 JavaScript 对象表示法（JavaScript Object Notation） </li>
+<li>JSON 是轻量级的文本数据交换格式，并不是编程语言 </li>
+<li>JSON 独立于语言存在 </li>
+<li>JSON 具有自我描述性，更易理解 </li>
+<li>JSON 可以将 JavaScript 对象中表示的一组数据转换为字符串，然后就可以在函数之间轻松地传递这个字符串，或者在异步应用程序中将字符串从 Web 客户机传递给服务器端程序。这个字符串看起来有点儿古怪，但是JavaScript很容易解释它，而且 JSON 可以表示比”名称 / 值对”更复杂的结构。例如，可以表示数组和复杂的对象，而不仅仅是键和值的简单列表</li>
+</ol>
+<p>回答三：</p>
+<p>JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。</p>
+<p>它是基于JavaScript的一个子集。数据格式简单, 易于读写, 占用带宽小.</p>
+<p>json简单说就是javascript中的对象和数组，所以这两种结构就是对象和数组两种结构，通过这两种结构可以表示各种复杂的结构。</p>
+<ul>
+<li>对象：对象在js中表示为“{}”括起来的内容，数据结构为 {key：value,key：value,…}的键值对的结构，在面向对象的语言中，key为对象的属性，value为对应的属性值，所以很容易理解，取值方法为 对象.key 获取属性值，这个属性值的类型可以是 数字、字符串、数组、对象几种。 </li>
+<li>数组：数组在js中是中括号“[]”括起来的内容，数据结构为 [“java”,”javascript”,”vb”,…]，取值方式和所有语言中一样，使用索引获取，字段值的类型可以是数字、字符串、数组、对象几种。<br>经过对象、数组2种结构就可以组合成复杂的数据结构了。</li>
+</ul>
+<h3 id="2-对闭包的理解"><a href="#2-对闭包的理解" class="headerlink" title="2.对闭包的理解"></a>2.对闭包的理解</h3><ol>
+<li>使用闭包主要是为了设计私有的方法和变量。闭包的优点是可以避免全局变量的污染，缺点是闭包会常驻内存，会增大内存使用量，使用不当很容易造成内存泄露。</li>
+<li>闭包有三个特性：<ul>
+<li>a、函数嵌套函数 </li>
+<li>b、函数内部可以引用外部的参数和变量 </li>
+<li>c、参数和变量不会被垃圾回收机制回收</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-对This对象的理解"><a href="#3-对This对象的理解" class="headerlink" title="3.对This对象的理解"></a>3.对This对象的理解</h3><h4 id="回答一："><a href="#回答一：" class="headerlink" title="回答一："></a>回答一：</h4><ol>
+<li>js的this指向是不确定的，也就是说是可以动态改变的。call/apply 就是用于改变this指向的函数，这样设计可以让代码更加灵活，复用性更高 </li>
+<li>this 一般情况下，都是指向函数的拥有者。 </li>
+<li><p>在函数自执行里，this 指向的是 window 对象。 </p>
+<p>扩展：关于this，还有一个地方比较让人模糊的是在dom事件里，通常有如下3种情况：</p>
+<ul>
+<li>使用标签属性注册事件，此时this指向的是window对象。 </li>
+<li>对与a，要让this指向input，可以将this作为参数传递。 </li>
+<li>使用addEventListener等注册事件。此时this也是指向 input。</li>
+</ul>
+</li>
+</ol>
+<p><a href="Joeycpp.github.io" title="我的博客">Joeycpp.github.io</a></p>
 
       
     </div>
@@ -365,8 +397,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/26/css知识点/" rel="next" title="Css知识点和布局技巧">
-                <i class="fa fa-chevron-left"></i> Css知识点和布局技巧
+              <a href="/2018/03/26/input光标问题/" rel="next" title="踩坑之IOS中input光标跑偏问题的解决方法">
+                <i class="fa fa-chevron-left"></i> 踩坑之IOS中input光标跑偏问题的解决方法
               </a>
             
           </div>
@@ -375,8 +407,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/26/hexo教程/" rel="prev" title="使用Github Page和Hexo搭建个人博客">
-                使用Github Page和Hexo搭建个人博客 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/26/Meta标签/" rel="prev" title="你对 Meta 标签了解多少？">
+                你对 Meta 标签了解多少？ <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -500,7 +532,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-对json的理解"><span class="nav-number">1.</span> <span class="nav-text">1.对json的理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-对闭包的理解"><span class="nav-number">2.</span> <span class="nav-text">2.对闭包的理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-对This对象的理解"><span class="nav-number">3.</span> <span class="nav-text">3.对This对象的理解</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#回答一："><span class="nav-number">3.1.</span> <span class="nav-text">回答一：</span></a></li></ol></li></ol></div>
             
 
           </div>
